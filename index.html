@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Delhi Metro Live Tracking</title>
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<!-- =========================
+     INFO PANEL
+========================= -->
+
+<div class="infoBox">
+
+    <h2>🚇 Metro Tracking</h2>
+
+    <div class="row">
+        <span class="label">Speed:</span>
+        <span id="speed">0</span> km/h
+    </div>
+
+    <div class="row">
+        <span class="label">Current Station:</span>
+        <span id="currentStation">-</span>
+    </div>
+
+    <div class="row">
+        <span class="label">Next Station:</span>
+        <span id="nextStation">-</span>
+    </div>
+
+    <div class="row">
+        <span class="label">ETA:</span>
+        <span id="eta">-</span>
+    </div>
+
+    <div class="row">
+        <span class="label">Metro Status:</span>
+        <span id="metroStatus">Not in Metro</span>
+    </div>
+
+    <div id="metroQuestion">
+
+        <div class="row">
+            <b>Are you inside Metro?</b>
+        </div>
+
+        <div class="buttonWrap">
+
+            <button class="btn yesBtn"
+            onclick="insideMetro(true)">
+                YES
+            </button>
+
+            <button class="btn noBtn"
+            onclick="insideMetro(false)">
+                NO
+            </button>
+
+        </div>
+    </div>
+
+    <div class="row">
+    <span class="label">Distance:</span>
+    <span id="distance">-</span>
+</div>
+
+<div class="row">
+    <span class="label">Metro Line:</span>
+    <span id="metroStatus">Not in Metro</span>
+</div>
+
+</div>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+<!-- =========================
+ADD THIS FULL JAVASCRIPT
+REPLACE YOUR OLD SCRIPT
+========================= -->
+
+
+</body>
+</html>
